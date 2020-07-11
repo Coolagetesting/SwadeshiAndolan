@@ -1,11 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:url_launcher/url_launcher.dart';
 
-class NeboryPage extends StatefulWidget {
+class ItemPage extends StatefulWidget {
+
+  ItemPage({Key key}) : super(key: key);
+
   @override
-  _NeboryPageState createState() => _NeboryPageState();
+  _ItemPageState createState() => _ItemPageState();
+  
 }
 
-class _NeboryPageState extends State<NeboryPage> {
+class _ItemPageState extends State<ItemPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -284,7 +289,10 @@ class _NeboryPageState extends State<NeboryPage> {
                       color: Colors.blue,
                       child: MaterialButton(
                         focusColor: Colors.blue,
-                        onPressed: null,
+                        onPressed: () {
+                          launch(
+                              "https://play.google.com/store/apps/details?id=com.myera");
+                        },
                         child: Text(
                           "Download for Android",
                           style: TextStyle(
@@ -294,7 +302,10 @@ class _NeboryPageState extends State<NeboryPage> {
                   Container(
                       color: Colors.black,
                       child: MaterialButton(
-                        onPressed: null,
+                        onPressed: () {
+                          launch(
+                              "https://apps.apple.com/in/app/nebory/id1394427262");
+                        },
                         child: Text(
                           "Download for Apple",
                           style: TextStyle(
@@ -308,5 +319,6 @@ class _NeboryPageState extends State<NeboryPage> {
         ],
       ),
     );
+  
   }
 }

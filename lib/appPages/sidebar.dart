@@ -1,5 +1,6 @@
-import 'package:desbhaktwebsite/appPages/chatting/chatting.dart';
-import 'package:desbhaktwebsite/appPages/social/social.dart';
+import 'package:desbhaktwebsite/pages/items_list_page.dart';
+import 'package:desbhaktwebsite/widgets/item1.dart';
+import 'package:desbhaktwebsite/widgets/item2.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,7 @@ class AppContainer extends StatefulWidget {
 }
 
 class _AppContainerState extends State<AppContainer> {
+  
   final List<String> menuItems = [
     "Social",
     "Chatting",
@@ -28,6 +30,7 @@ class _AppContainerState extends State<AppContainer> {
     "Video Editing",
     "Photo Editing",
   ];
+  
   final List<String> menuIcons = [
     "icon_Social",
     "icon_Chatting",
@@ -49,7 +52,6 @@ class _AppContainerState extends State<AppContainer> {
   ];
 
   bool sidebarOpen = false;
-
   double yOffset = 0;
   double xOffset = 60;
   double pageScale = 1;
@@ -69,12 +71,62 @@ class _AppContainerState extends State<AppContainer> {
               color: Colors.red, fontSize: 30, fontWeight: FontWeight.bold),
         ),
       ),
-      Reposo(),
-      Nebory(),
-      BoloIndia(),
-      Pixalive(),
-      Chingari(),
-      Moj()
+      Item1(
+          name: 'Hike',
+          rating: '4.5',
+          usersNo: '181,861',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hike.png',
+          review: 'Viansh Malik ★★★★★',
+          reviewer:
+              'The application has amazing concept but a lot of bugs. For example in home when you call, only the owners voice is clearly audible. '),
+      Item2(
+          name: 'HapBlab',
+          rating: '4.6',
+          usersNo: '136',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hapblab.png',
+          review: 'Karan Ravat ★★★★★',
+          reviewer: 'It'
+              's a very good application to connect with the people easily but a small problem in video call when We do a video call to anyone then it'
+              's show error. otherwise it'
+              's very nice 😊'),
+      Item1(
+          name: 'Hike',
+          rating: '4.5',
+          usersNo: '181,861',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hike.png',
+          review: 'Viansh Malik ★★★★★',
+          reviewer:
+              'The application has amazing concept but a lot of bugs. For example in home when you call, only the owners voice is clearly audible. '),
+      Item2(
+          name: 'Hike',
+          rating: '4.5',
+          usersNo: '181,861',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hike.png',
+          review: 'Viansh Malik ★★★★★',
+          reviewer:
+              'The application has amazing concept but a lot of bugs. For example in home when you call, only the owners voice is clearly audible. '),
+      Item1(
+          name: 'Hike',
+          rating: '4.5',
+          usersNo: '181,861',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hike.png',
+          review: 'Viansh Malik ★★★★★',
+          reviewer:
+              'The application has amazing concept but a lot of bugs. For example in home when you call, only the owners voice is clearly audible. '),
+      Item2(
+          name: 'Hike',
+          rating: '4.5',
+          usersNo: '181,861',
+          type: 'Free',
+          imageUrl: 'assets/images/chatting/hike.png',
+          review: 'Viansh Malik ★★★★★',
+          reviewer:
+              'The application has amazing concept but a lot of bugs. For example in home when you call, only the owners voice is clearly audible. '),
     ],
   );
 
@@ -145,16 +197,16 @@ class _AppContainerState extends State<AppContainer> {
   void setPageContent() {
     switch (selectedMenuItem) {
       case 0:
-        pageContent = ShopItemsPage();
+        pageContent = ItemsListPage();
         break;
       case 1:
-        pageContent = ChattingPage();
+        pageContent = ItemsListPage();
         break;
       case 2:
-        pageContent = ShopItemsPage();
+        pageContent = ItemsListPage();
         break;
       case 3:
-        pageContent = ShopItemsPage();
+        pageContent = ItemsListPage();
         break;
     }
   }

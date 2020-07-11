@@ -2,8 +2,7 @@ import 'package:desbhaktwebsite/frontpage/header.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:velocity_x/velocity_x.dart';
-
-import 'colors.dart';
+import '../utils/colors.dart';
 
 class FooterScreen extends StatelessWidget {
   @override
@@ -20,7 +19,7 @@ class FooterScreen extends StatelessWidget {
                   .xl2
                   .make(),
               10.heightBox,
-              "deepakaryak9@gmail.com"
+              "hello@coolage.app"
                   .text
                   .color(Coolors.accentColor)
                   .semiBold
@@ -42,7 +41,7 @@ class FooterScreen extends StatelessWidget {
                   .xl2
                   .make(),
               10.widthBox,
-              "deepakaryak9@gmail.com"
+              "hello@coolage.app"
                   .text
                   .color(Coolors.accentColor)
                   .semiBold

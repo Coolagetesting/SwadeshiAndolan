@@ -1,13 +1,15 @@
 import 'dart:math';
-import 'package:desbhaktwebsite/frontpage/colors.dart';
+import 'package:desbhaktwebsite/utils/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_icons/flutter_icons.dart';
 import 'package:url_launcher/url_launcher.dart';
 import 'package:velocity_x/velocity_x.dart';
 
 class HeaderScreen extends StatelessWidget {
+  
   @override
   Widget build(BuildContext context) {
+
     final nameWidget = "Support\nIndia."
         .text
         .orange500
@@ -17,6 +19,7 @@ class HeaderScreen extends StatelessWidget {
         .bold
         .make()
         .shimmer();
+
     return SafeArea(
       child: VxBox(
               child: VStack([
@@ -54,7 +57,7 @@ class HeaderScreen extends StatelessWidget {
                   ),
                 )
               ],
-            ).w(context.screenWidth)
+            ).w(context.screenWidth),
           ],
         )
       ]))
@@ -147,28 +150,28 @@ class SocialAccounts extends StatelessWidget {
         AntDesign.twitter,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://twitter.com/Deepakaryak9");
+        launch("https://twitter.com/CoolAgeapp");
       }).make(),
       20.widthBox,
       Icon(
         AntDesign.instagram,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://instagram.com/Deepak_life");
+        launch("https://www.instagram.com/coolageapp/");
       }).make(),
       20.widthBox,
       Icon(
-        AntDesign.youtube,
+        AntDesign.linkedin_square,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://youtube.com/asktohow");
+        launch("https://www.linkedin.com/company/coolageapp/");
       }).make(),
       20.widthBox,
       Icon(
         AntDesign.facebook_square,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://facebook.com/Deepakaryak9");
+        launch("https://www.facebook.com/coolageapp/");
       }).make()
     ].hStack();
   }
