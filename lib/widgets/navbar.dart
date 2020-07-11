@@ -1,4 +1,5 @@
 import 'package:desbhaktwebsite/appPages/sidebar.dart';
+import 'package:desbhaktwebsite/pages/reasion.dart';
 import 'package:flutter/material.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -36,9 +37,13 @@ class DesktopNavbar extends StatelessWidget {
             ),
             Row(
               children: <Widget>[
-                Text(
-                  "Home",
-                  style: TextStyle(color: Colors.white),
+                GestureDetector(
+                  onTap: (){
+                  },
+                  child: Text(
+                    "Home",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
@@ -55,9 +60,15 @@ class DesktopNavbar extends StatelessWidget {
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  'Reason',
-                  style: TextStyle(color: Colors.white),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => ReasonPage()));
+
+                  },
+                                  child: Text(
+                    'Reason',
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
                 SizedBox(
                   width: 30,
@@ -119,9 +130,14 @@ class MobileNavbar extends StatelessWidget {
                 SizedBox(
                   width: 30,
                 ),
-                Text(
-                  "Reason",
-                  style: TextStyle(color: Colors.white),
+                GestureDetector(
+                  onTap: (){
+                    Navigator.push(context, MaterialPageRoute(builder: (_) => ReasonPage()));
+                  },
+                child: Text(
+                    "Reason",
+                    style: TextStyle(color: Colors.white),
+                  ),
                 ),
               ],
             ),
